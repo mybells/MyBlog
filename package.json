@@ -1,0 +1,15 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "My Blog",
+  "main": "index.js",
+  "scripts": {
+    "dev:docs": "vuepress dev docs",
+    "build:docs": "vuepress build docs"
+  },
+  "author": "mybells",
+  "license": "ISC",
+  "dependencies": {
+    "vuepress": "^1.0.3"
+  }
+}
