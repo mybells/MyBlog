@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev:docs": "vuepress dev docs",
-    "build:docs": "vuepress build docs"
+    "build:docs": "vuepress build docs",
+    "publish": "bash deploy.sh"
   },
   "author": "mybells",
   "license": "ISC",
