@@ -2,8 +2,8 @@
 
 ## Javascript
 
-- [js正则表达式分组](./blog/jsblog/js正则表达式分组.html)
-- [for in与for of区别](./blog/jsblog/for%20in与for%20of区别.html)
+- [js正则表达式分组](docs/blog/jsblog/js正则表达式分组.md)
+- [for in与for of区别](docs/blog/jsblog/for%20in与for%20of区别.md)
 
 ## Css
 
