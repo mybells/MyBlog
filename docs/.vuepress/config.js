@@ -28,13 +28,6 @@ module.exports = {
         ]
       }
     ],
-    configureWebpack: {
-    resolve: {
-      alias: {
-        '@': '../'
-      }
-    }
-  },
     // 假定 GitHub。也可以是一个完整的 GitLab 网址
     repo: 'https://github.com/mybells/MyBlog',
     // 如果你的文档不在仓库的根部
@@ -44,6 +37,6 @@ module.exports = {
     // 默认为 true，设置为 false 来禁用
     editLinks: false,
     sidebarDepth:0,
-    lastUpdated: 'Last Updated' // 文档更新时间：每个文件git最后提交的时间
+    lastUpdated: 'Last Updated', // 文档更新时间：每个文件git最后提交的时间
   }
 }
