@@ -1,3 +1,10 @@
+### 
+# @Author: 高建鹏
+ # @Description: 
+ # @Position: 
+ # @Date: 2019-08-06 15:45:45
+ # @LastEditors: 高建鹏
+ ###
 #!/usr/bin/env sh
 
 # 确保脚本抛出遇到的错误
@@ -12,7 +19,7 @@ cd docs/.vuepress/dist
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
 
-git init
+git init 
 git add -A
 git commit -m 'deploy'
 
