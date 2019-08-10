@@ -7,4 +7,8 @@
 
 ## Css
 
-- [BFC（Block Formatting Context）块级格式化上下文]([./blog/](https://mybells.github.io/blog/)cssblog/BFC（Block%20Formatting%20Context）块级格式化上下文.html)
+- [BFC（Block Formatting Context）块级格式化上下文](https://mybells.github.io/blog/cssblog/BFC（Block%20Formatting%20Context）块级格式化上下文.html)
+
+## Other
+
+- [搭建vuepress博客并发布在github.io上](https://mybells.github.io/blog/otherblog/搭建vuepress博客并发布在github.io上.html)

@@ -26,6 +26,12 @@ module.exports = {
         children: [
           '/blog/cssblog/BFC（Block Formatting Context）块级格式化上下文'
         ]
+      },
+      {
+        title: 'Other',
+        children: [
+          '/blog/otherblog/搭建vuepress博客并发布在github.io上'
+        ]
       }
     ],
     // 假定 GitHub。也可以是一个完整的 GitLab 网址

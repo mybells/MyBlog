@@ -8,3 +8,7 @@
 ## Css
 
 - [BFC（Block Formatting Context）块级格式化上下文](docs/blog/cssblog/BFC（Block%20Formatting%20Context）块级格式化上下文.html)
+
+## Other
+
+- [搭建vuepress博客并发布在github.io上](docs/blog/otherblog/搭建vuepress博客并发布在github.io上.html)
