@@ -19,3 +19,4 @@
 ## Other
 
 - [搭建vuepress博客并发布在github.io上](docs/blog/otherblog/搭建vuepress博客并发布在github.io上.html)
+- [vue和webpack配合常用package](docs/blog/otherblog/vue和webpack配合常用package.html)

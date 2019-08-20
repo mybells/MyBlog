@@ -39,7 +39,8 @@ module.exports = {
       {
         title: 'Other',
         children: [
-          '/blog/otherblog/搭建vuepress博客并发布在github.io上'
+          '/blog/otherblog/搭建vuepress博客并发布在github.io上',
+          '/blog/otherblog/vue和webpack配合常用package',
         ]
       }
     ],
