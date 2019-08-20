@@ -3,6 +3,7 @@
 ## Vue
 
 - [vue中的watch和data用法](https://mybells.github.io/blog/vueblog/vue中的watch和data用法.html)
+- [vue自定义指令](https://mybells.github.io/blog/vueblog/vue自定义指令.html)
 
 ## Javascript
 

@@ -17,7 +17,8 @@ module.exports = {
       {
         title: 'Vue',
         children: [
-          '/blog/vueblog/vue中的watch和data用法'
+          '/blog/vueblog/vue中的watch和data用法',
+          '/blog/vueblog/vue自定义指令',
         ]
       },
       {
