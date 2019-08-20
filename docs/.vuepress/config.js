@@ -26,6 +26,7 @@ module.exports = {
         children: [
           '/blog/jsblog/js正则表达式分组',
           '/blog/jsblog/for in与for of区别',
+          '/blog/jsblog/async和promise',
         ]
       },
       {

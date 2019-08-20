@@ -9,6 +9,7 @@
 
 - [js正则表达式分组](https://mybells.github.io/blog/jsblog/js正则表达式分组.html)
 - [for in与for of区别](https://mybells.github.io/blog/jsblog/for%20in与for%20of区别.html)
+- [async和promise](https://mybells.github.io/blog/jsblog/async和promise.html)
 
 ## Css
 
