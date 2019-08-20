@@ -1,5 +1,9 @@
 # Mybells's Blog
 
+## Vue
+
+- [vue中的watch和data用法](docs/blog/vueblog/vue中的watch和data用法.md)
+
 ## Javascript
 
 - [js正则表达式分组](docs/blog/jsblog/js正则表达式分组.md)

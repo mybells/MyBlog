@@ -15,6 +15,12 @@ module.exports = {
     ],
     sidebar: [
       {
+        title: 'Vue',
+        children: [
+          '/blog/vueblog/vue中的watch和data用法'
+        ]
+      },
+      {
         title: 'Javascript',
         children: [
           '/blog/jsblog/js正则表达式分组',
