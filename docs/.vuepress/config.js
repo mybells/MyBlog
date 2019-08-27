@@ -16,6 +16,7 @@ module.exports = {
     sidebar: [
       {
         title: 'Vue',
+        collapsable: false,
         children: [
           '/blog/vueblog/vue中的watch和data用法',
           '/blog/vueblog/vue自定义指令',
@@ -23,7 +24,9 @@ module.exports = {
       },
       {
         title: 'Javascript',
+        collapsable: false,
         children: [
+          '/blog/jsblog/深拷贝与浅拷贝',
           '/blog/jsblog/js正则表达式分组',
           '/blog/jsblog/for in与for of区别',
           '/blog/jsblog/async和promise',
@@ -32,12 +35,14 @@ module.exports = {
       },
       {
         title: 'Css',
+        collapsable: false,
         children: [
           '/blog/cssblog/BFC（Block Formatting Context）块级格式化上下文'
         ]
       },
       {
         title: 'Other',
+        collapsable: false,
         children: [
           '/blog/otherblog/搭建vuepress博客并发布在github.io上',
           '/blog/otherblog/vue和webpack配合常用package',

@@ -7,6 +7,7 @@
 
 ## Javascript
 
+- [深拷贝与浅拷贝](docs/blog/jsblog/深拷贝与浅拷贝.md)
 - [js正则表达式分组](docs/blog/jsblog/js正则表达式分组.md)
 - [for in与for of区别](docs/blog/jsblog/for%20in与for%20of区别.md)
 - [async和promise](docs/blog/jsblog/async和promise.md)
