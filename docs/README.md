@@ -4,6 +4,8 @@
 
 - [vue中的watch和data用法](https://mybells.github.io/blog/vueblog/vue中的watch和data用法.html)
 - [vue自定义指令](https://mybells.github.io/blog/vueblog/vue自定义指令.html)
+- [vue API总结](https://mybells.github.io/blog/vueblog/vueAPI总结.html)
+- [vuex总结](https://mybells.github.io/blog/vueblog/vuex总结.html)
 
 ## Javascript
 - [深拷贝与浅拷贝](https://mybells.github.io/blog/jsblog/深拷贝与浅拷贝.html)

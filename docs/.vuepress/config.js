@@ -20,6 +20,8 @@ module.exports = {
         children: [
           '/blog/vueblog/vue中的watch和data用法',
           '/blog/vueblog/vue自定义指令',
+          '/blog/vueblog/vueAPI总结',
+          '/blog/vueblog/vuex总结',
         ]
       },
       {
