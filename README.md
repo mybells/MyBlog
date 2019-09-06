@@ -4,7 +4,8 @@
 
 - [vue中的watch和data用法](docs/blog/vueblog/vue中的watch和data用法.md)
 - [vue自定义指令](docs/blog/vueblog/vue自定义指令.md)
-
+- [vue API总结](docs/blog/vueblog/vueAPI总结.md)
+- [vuex总结](docs/blog/vueblog/vuex总结.md)
 ## Javascript
 
 - [深拷贝与浅拷贝](docs/blog/jsblog/深拷贝与浅拷贝.md)
