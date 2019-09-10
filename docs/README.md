@@ -6,6 +6,7 @@
 - [vue自定义指令](https://mybells.github.io/blog/vueblog/vue自定义指令.html)
 - [vue API总结](https://mybells.github.io/blog/vueblog/vueAPI总结.html)
 - [vuex总结](https://mybells.github.io/blog/vueblog/vuex总结.html)
+- [vue中使用vuerouter遇到的问题](https://mybells.github.io/blog/vueblog/vue中使用vuerouter遇到的问题.html)
 
 ## Javascript
 - [深拷贝与浅拷贝](https://mybells.github.io/blog/jsblog/深拷贝与浅拷贝.html)

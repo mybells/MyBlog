@@ -22,6 +22,7 @@ module.exports = {
           '/blog/vueblog/vue自定义指令',
           '/blog/vueblog/vueAPI总结',
           '/blog/vueblog/vuex总结',
+          '/blog/vueblog/vue中使用vuerouter遇到的问题',
         ]
       },
       {
