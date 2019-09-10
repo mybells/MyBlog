@@ -49,6 +49,7 @@ module.exports = {
         children: [
           '/blog/otherblog/搭建vuepress博客并发布在github.io上',
           '/blog/otherblog/vue和webpack配合常用package',
+          '/blog/otherblog/yarn.lock、package-lock.json、npm-shrinkwrap.json的理解',
         ]
       }
     ],

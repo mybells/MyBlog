@@ -17,9 +17,10 @@
 
 ## Css
 
-- [BFC（Block Formatting Context）块级格式化上下文](docs/blog/cssblog/BFC（Block%20Formatting%20Context）块级格式化上下文.html)
+- [BFC（Block Formatting Context）块级格式化上下文](docs/blog/cssblog/BFC（Block%20Formatting%20Context）块级格式化上下文.md)
 
 ## Other
 
-- [搭建vuepress博客并发布在github.io上](docs/blog/otherblog/搭建vuepress博客并发布在github.io上.html)
-- [vue和webpack配合常用package](docs/blog/otherblog/vue和webpack配合常用package.html)
+- [搭建vuepress博客并发布在github.io上](docs/blog/otherblog/搭建vuepress博客并发布在github.io上.md)
+- [vue和webpack配合常用package](docs/blog/otherblog/vue和webpack配合常用package.md)
+- [yarn.lock、package-lock.json、npm-shrinkwrap.json的理解](docs/blog/otherblog/yarn.lock、package-lock.json、npm-shrinkwrap.json的理解.md)
