@@ -1,5 +1,7 @@
+## css3样式效果
+
 ### 1.渐进颜色变化
- ![渐进颜色变化](images/css效果/img1.png)
+ ![渐进颜色变化](/images/css效果/img1.png)
 ```html
   <style>
     /* 渐进色 */
@@ -13,7 +15,7 @@
 ```
 
 ### 2.按钮进行中状态
- ![按钮进行中状态](images/css效果/img2.gif)
+ ![按钮进行中状态](/images/css效果/img2.gif)
 ```html
   <style>
     /* 按钮 */
@@ -46,7 +48,7 @@
 ```
 
 ### 3.圆360度转动
- ![圆360度转动](images/css效果/img3.gif)
+ ![圆360度转动](/images/css效果/img3.gif)
 ```html
   <style>
     /* 圆360度转动 */
@@ -71,7 +73,7 @@
 ```
 
 ### 4.圆上有线进行上下移动扫描
- ![圆上有线进行上下移动扫描](images/css效果/img4.gif)
+ ![圆上有线进行上下移动扫描](/images/css效果/img4.gif)
 ```html
   <style>
     /* 圆上有线进行上下移动扫描 */
@@ -110,7 +112,7 @@
 ```
 
 ### 5.扇形百分比图
- ![扇形百分比图](images/css效果/img5.png)
+ ![扇形百分比图](/images/css效果/img5.png)
 ```html
   <style>
     /* 扇形百分比图 */
