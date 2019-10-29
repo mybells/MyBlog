@@ -40,7 +40,8 @@ module.exports = {
         title: 'Css',
         collapsable: false,
         children: [
-          '/blog/cssblog/BFC（Block Formatting Context）块级格式化上下文'
+          '/blog/cssblog/BFC（Block Formatting Context）块级格式化上下文',
+          '/blog/cssblog/css3样式效果'
         ]
       },
       {
