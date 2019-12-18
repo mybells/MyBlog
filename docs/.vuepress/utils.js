@@ -24,7 +24,6 @@ exports.inferSiderbars = () => {
         }
       }).filter(item => item)
     } else {
-      debugger;
       sidebar[key] = fs.readdirSync(dirpath).map(item => {
         if (fs.statSync(path.join(dirpath, item)).isDirectory()) {
           title = item;
