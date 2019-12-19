@@ -14,7 +14,7 @@ module.exports = {
       { text: 'Blog', link: '/blog/', title: 'xxx' },
       { text: 'BookStore', link: '/book/' },
       { text: 'MyStars', link: '/mystars/' },
-      { text: 'Someonestars', link: '/getsomeonestars/' },
+      { text: 'SomeoneStars', link: '/getsomeonestars/' },
       { text: 'CSDN', link: 'https://blog.csdn.net/qwe435541908' },
     ],
     sidebar: utils.inferSiderbars(),
