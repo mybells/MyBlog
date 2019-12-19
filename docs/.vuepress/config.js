@@ -6,14 +6,15 @@ module.exports = {
     ['link', { rel: 'icon', href: `https://github.githubassets.com/favicon.ico` }]
   ],
   markdown: {
-    toc:{ includeLevel: [2, 3] },//[[toc]]包含的级别
+    toc: { includeLevel: [2, 3] }, //[[toc]]包含的级别
     lineNumbers: true // 代码块显示行号
   },
   themeConfig: {
     nav: [
-      { text: 'Blog', link: '/blog/',title:'xxx'},
+      { text: 'Blog', link: '/blog/', title: 'xxx' },
       { text: 'BookStore', link: '/book/' },
       { text: 'MyStars', link: '/mystars/' },
+      { text: 'Someonestars', link: '/getsomeonestars/' },
       { text: 'CSDN', link: 'https://blog.csdn.net/qwe435541908' },
     ],
     sidebar: utils.inferSiderbars(),
@@ -42,12 +43,23 @@ module.exports = {
     sidebarDepth: 0,
     lastUpdated: 'Last Updated', // 文档更新时间：每个文件git最后提交的时间
   },
-  configureWebpack: {
-    resolve: {
-      alias: {
-        '@public': './public'
+  // configureWebpack: {
+
+  // },
+  configureWebpack: (config, isServer) => {
+    if (!isServer) {
+      return {
+        resolve: {
+          alias: {
+            '@public': './public'
+          }
+        },
+        devServer: {
+          open: true,
+          https: true
+        }
       }
     }
   },
-  plugins: [ '@vuepress/back-to-top','@vuepress/nprogress']
+  plugins: ['@vuepress/back-to-top', '@vuepress/nprogress']
 }
