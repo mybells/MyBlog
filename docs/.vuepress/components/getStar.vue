@@ -9,7 +9,7 @@
       <template v-for="(items, key) in list">
         <div>## {{ key }}</div>
         <template v-for="(item, key) in items">
-          <p>- [{{item.name}}]({{item.url}}) {{item.description}}</p>
+          <p>- [{{item.name}}]({{item.html_url}}) {{item.description}}</p>
         </template>
       </template>
     </div>
@@ -91,7 +91,7 @@ export default {
               mdStr+=`\n## ${key}`;
               let list=this.data[key];
               for(let obj of list){
-                mdStr+=`\n- [${obj.name}](${obj.url})<svg
+                mdStr+=`\n- [${obj.name}](${obj.html_url})<svg
                   xmlns="http://www.w3.org/2000/svg"
                   aria-hidden="true"
                   x="0px"
