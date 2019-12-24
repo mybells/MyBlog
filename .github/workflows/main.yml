@@ -11,7 +11,7 @@ jobs:
       uses: actions/checkout@master
       
     - name: build and Deploy
-      uses: mybells/github-pages-deploy-action@master
+      uses: JamesIves/github-pages-deploy-action@master
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: master
