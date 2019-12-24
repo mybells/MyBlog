@@ -1,4 +1,4 @@
-name:Deploy MyBlog
+name: Deploy MyBlog
 on:
   push:
     branches:
