@@ -1,0 +1,22 @@
+{
+  "name": "blog",
+  "version": "1.1.0",
+  "description": "My Blog",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "publish": "bash deploy.sh"
+  },
+  "author": "mybells",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "element-ui": "^2.13.0",
+    "vuepress": "^1.0.3"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.2.0",
+    "@vuepress/plugin-nprogress": "^1.2.0"
+  }
+}
