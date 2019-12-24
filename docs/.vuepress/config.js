@@ -12,7 +12,7 @@ module.exports = {
   },
   themeConfig: {
     nav: [
-      { text: 'Blog', link: '/blog/', title: 'xxx' },
+      { text: 'Blog', link: '/blog/' },
       { text: 'BookStore', link: '/book/' },
       { text: 'MyStars', link: '/mystars/' },
       { text: 'SomeoneStars', link: '/getsomeonestars/' },
