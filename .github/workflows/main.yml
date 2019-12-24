@@ -1,0 +1,23 @@
+name:Deploy MyBlog
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+      
+    - name: build and Deploy
+      uses: mybells/github-pages-deploy-action@master
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: master
+        FOLDER: build
+        BUILD_SCRIPT: npm install && npm run build
