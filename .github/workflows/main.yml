@@ -9,7 +9,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - run: npm install
-    - run: npm run docs:build
     - run: npm run publish
 
 #     - name: Deploy
