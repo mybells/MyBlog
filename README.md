@@ -1,7 +1,7 @@
 # Mybells's Blog
 
 ## Vue
-  test
+
 - [vue中的watch和data用法](docs/blog/Vue/vue中的watch和data用法.md)
 - [vue自定义指令](docs/blog/Vue/vue自定义指令.md)
 - [vue API总结](docs/blog/Vue/vueAPI总结.md)
