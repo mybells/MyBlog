@@ -1,15 +1,15 @@
-# name: Deploy MyBlog
-# on:
-#   push:
-#     branches:
-#       - master
-# jobs:
-#   build-and-deploy:
-#     runs-on: ubuntu-latest
-#     steps:
-#     - uses: actions/checkout@v1
-#     - run: npm install
-#     - run: npm run docs:build
+name: Deploy MyBlog
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: window-latest
+    steps:
+    - uses: actions/checkout@v1
+    - run: npm install
+    - run: npm run docs:build
 #     - run: cp CNAME docs/.vuepress/dist/
 
 #     - name: Deploy
