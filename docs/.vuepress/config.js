@@ -17,21 +17,17 @@ module.exports = {
       { text: 'SomeoneStars', link: '/getsomeonestars/' },
       { text: 'CSDN', link: 'https://blog.csdn.net/qwe435541908' },
     ],
-    sidebar: utils.inferSiderbars(),
-    // sidebar: {
-    //   '/blog/': [
-    //     {
-    //       title: 'Vue',
-    //       collapsable: false,
-    //       children: [
-    //         '/blog/vueblog/vue中的watch和data用法',
-    //         '/blog/vueblog/vue自定义指令',
-    //         '/blog/vueblog/vueAPI总结',
-    //         '/blog/vueblog/vuex总结',
-    //         '/blog/vueblog/vue中使用vuerouter遇到的问题',
-    //       ]
-    //     }
-    // },
+    // sidebar: utils.inferSiderbars(),
+    sidebar: {
+      '/blog/': [
+        {
+          title: 'Css',
+          collapsable: false,
+          children: [
+            '/Css/css3样式效果',
+          ]
+        }
+    },
     // 假定 GitHub。也可以是一个完整的 GitLab 网址
     repo: 'https://github.com/mybells/MyBlog',
     // 如果你的文档不在仓库的根部
