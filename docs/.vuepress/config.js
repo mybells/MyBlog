@@ -2,7 +2,6 @@ const utils = require('./utils')
 module.exports = {
   title: 'Mybells\'s Log',
   description: 'Mybells\'s Log',
-  dest: 'docs/dist',
   head: [
     ['link', { rel: 'icon', href: `https://github.githubassets.com/favicon.ico` }]
   ],
