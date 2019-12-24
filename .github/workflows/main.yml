@@ -10,8 +10,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Build
+      - name: Install
         run: npm install
+
+      - name: Build
         run: npm run build:docs
 
       - name: Deploy
