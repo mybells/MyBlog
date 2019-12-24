@@ -12,16 +12,10 @@ jobs:
 
       - name: Build
         run: npm install
+        run: npm run build
 
       - name: Deploy
-        env:
-          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          PUBLISH_BRANCH: master
-          PUBLISH_DIR: docs
-          SCRIPT_MODE: true
-        run: |
-          wget https://raw.githubusercontent.com/peaceiris/actions-gh-pages/v2/entrypoint.sh
-          bash ./deploy.sh
+        run: npm run publish
       # - name: Build and Deploy
       #   uses: JamesIves/github-pages-deploy-action@releases/v3
       #   with:
