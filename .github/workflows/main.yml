@@ -15,7 +15,7 @@ jobs:
 
       - name: Build
         run: npm run build:docs
-
+      - run: cp CNAME docs/.vuepress/dist/
       - name: Deploy
         run: npm run publish
       # - name: Build and Deploy
