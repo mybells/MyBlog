@@ -9,23 +9,10 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - run: npm install
-    - run: npm run publish
 
-#     - name: Deploy
-#       uses: peaceiris/actions-gh-pages@v2.5.0
-#       env:
-#         ACTIONS_DEPLOY_KEY: ${{secrets.ACTIONS_DEPLOY_KEY}}
-#         PUBLISH_BRANCH: master
-#         PUBLISH_DIR: docs/.vuepress/dist
-
-#     steps:
-#       - name: Checkout
-#         uses: actions/checkout@v1
-
-#       - name: Build and Deploy
-#         uses: JamesIves/github-pages-deploy-action@releases/v3
-#         with:
-#           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-#           BRANCH: master # The branch the action should deploy to.
-#           FOLDER: .vuepress/ # The folder the action should deploy.
-#           BUILD_SCRIPT: npm install && npm run docs:build
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2.5.0
+      env:
+        ACTIONS_DEPLOY_KEY: ${{secrets.ACTIONS_DEPLOY_KEY}}
+        PUBLISH_BRANCH: master
+        PUBLISH_DIR: docs/.vuepress/dist
