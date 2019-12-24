@@ -1,6 +1,6 @@
-# Mybells's Blog
+# 学习 Javascript 数据结构与算法
 
-## Vue
+## 1.javascript 简介
 
 d
 
@@ -20,12 +20,12 @@ d
 - [async 和 promise](docs/blog/Javascript/async和promise.md)
 - [class 与 class 继承](docs/blog/Javascript/class与class继承.md)
 
-## Css
+- [2.ECMAScript 和 TypeScript 概述](./学习Javascript数据结构与算法/2ECMAScript和TypeScript概述.md)
 
 - [BFC（Block Formatting Context）块级格式化上下文](docs/blog/Css/BFC（Block%20Formatting%20Context）块级格式化上下文.md)
 - [css3 样式效果](docs/blog/Css/css3样式效果.md)
 
-## Other
+- [3.数组](./学习Javascript数据结构与算法/3数组.md)
 
 - [搭建 vuepress 博客并发布在 github.io 上](docs/blog/Other/搭建vuepress博客并发布在github.io上.md)
 - [vue 和 webpack 配合常用 package](docs/blog/Other/vue和webpack配合常用package.md)
