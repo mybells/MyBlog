@@ -24,7 +24,7 @@ module.exports = {
           title: 'Css',
           collapsable: false,
           children: [
-            '/Css/css3样式效果',
+            'Css/css3样式效果.md',
           ]
         }
       ]
