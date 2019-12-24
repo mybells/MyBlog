@@ -5,7 +5,7 @@ on:
       - master
 jobs:
   build-and-deploy:
-    runs-on: window-latest
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v1
     - run: npm install
