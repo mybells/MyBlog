@@ -8,7 +8,11 @@
     "build:docs": "vuepress build docs",
     "publish": "deploy.sh"
   },
-  "homepage": "https://github.com/mybells/mybells.github.io",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mybells/MyBlog.git"
+  },
+  "homepage": "https://github.com/mybells/MyBlog",
   "author": "mybells",
   "license": "ISC",
   "dependencies": {
