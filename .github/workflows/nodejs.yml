@@ -7,17 +7,15 @@ on:
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
 
-    - name: Setup Node
-      uses: actions/setup-node@v1
-      with:
-        node-version: '10.x'
-
+    # - name: Setup Node
+    #   uses: actions/setup-node@v1
+    #   with:
+    #     node-version: '10.x'
     - run: npm ci
-    - run: cp CNAME docs/.vuepress/dist/
     - run: npm run docs:build
 
     - name: Deploy
