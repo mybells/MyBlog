@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-      - uses: actions/checkout@v1
-      - run: cp CNAME docs/.vuepress/dist/
+        uses: actions/checkout@v1
+        run: cp CNAME docs/.vuepress/dist/
 
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
