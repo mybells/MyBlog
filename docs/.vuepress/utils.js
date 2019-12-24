@@ -4,7 +4,7 @@ const fs = require('fs')
 const sidebarMap = [
   // { title: 'Someonestars', dirname: 'getsomeonestars', flag: 1 },
   { title: 'Mystars', dirname: 'mystars', flag: 1 },
-  { title: 'Blog', dirname: 'blog', flag: 0 },
+//   { title: 'Blog', dirname: 'blog', flag: 0 },
   { title: 'BookStore', dirname: 'book', flag: 0, collapsable: true },
 ]
 exports.inferSiderbars = () => {
