@@ -1,6 +1,6 @@
 const utils = require('./utils')
 module.exports = {
-  base:"/MyBlog/",
+  // base:"/MyBlog/",
   title: 'Mybells\'s Log',
   description: 'Mybells\'s Log',
   head: [
@@ -41,9 +41,6 @@ module.exports = {
     sidebarDepth: 0,
     lastUpdated: 'Last Updated', // 文档更新时间：每个文件git最后提交的时间
   },
-  // configureWebpack: {
-
-  // },
   configureWebpack: (config, isServer) => {
     if (!isServer) {
       return {
