@@ -1,5 +1,6 @@
 const utils = require('./utils')
 module.exports = {
+  base:"/MyBlog/",
   title: 'Mybells\'s Log',
   description: 'Mybells\'s Log',
   head: [
