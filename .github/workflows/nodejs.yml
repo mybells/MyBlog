@@ -20,3 +20,5 @@ jobs:
         EXTERNAL_REPOSITORY: mybells/mybells.github.io
         PUBLISH_BRANCH: master
         PUBLISH_DIR: docs/.vuepress/dist
+      with:
+          emptyCommits: false
