@@ -17,6 +17,6 @@ jobs:
       uses: peaceiris/actions-gh-pages@v2
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        EXTERNAL_REPOSITORY: mybells/https://github.com/mybells/mybells.github.io.git
+        EXTERNAL_REPOSITORY: mybells/mybells.github.io.git
         PUBLISH_BRANCH: master
         PUBLISH_DIR: docs/.vuepress/dist
