@@ -1,0 +1,3 @@
+<ClientOnly>
+  <getStar/>
+</ClientOnly>
