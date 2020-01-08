@@ -28,8 +28,8 @@ exports.inferSiderbars = () => {
       sidebar[key] = fs.readdirSync(dirpath).map(item => {
         if (fs.statSync(path.join(dirpath, item)).isDirectory()) {
           title = item;
-          children = fs.readdirSync(`${dirpath}\\${item}`).map(name => {
-            if (name.endsWith('.md') && fs.statSync(path.join(`${dirpath}\\${item}`, name)).isFile()) {
+          children = fs.readdirSync(path.join(dirpath, item)).map(name => {
+            if (name.endsWith('.md') && fs.statSync(path.join(path.join(dirpath, item), name)).isFile()) {
               return `${item}/${name}`;
             }
           })

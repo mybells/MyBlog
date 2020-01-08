@@ -12,7 +12,7 @@
 - [深拷贝与浅拷贝](docs/blog/Javascript/深拷贝与浅拷贝.md)
 - [js正则表达式分组](docs/blog/Javascript/js正则表达式分组.md)
 - [for in与for of区别](docs/blog/Javascript/for%20in与for%20of区别.md)
-- [Javascript Array MDN总结（2）](docs/blog/Javascript/Javascript%20Array%20MDN总结（2）.md)
+- [Javascript Array MDN总结（1）](docs/blog/Javascript/Javascript%20Array%20MDN总结（1）.md)
 - [Javascript Array MDN总结（2）](docs/blog/Javascript/Javascript%20Array%20MDN总结（2）.md)
 - [async和promise](docs/blog/Javascript/async和promise.md)
 - [class与class继承](docs/blog/Javascript/class与class继承.md)
