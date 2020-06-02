@@ -1,10 +1,10 @@
-## 搭建vuepress博客并发布在github.io上
+# 搭建vuepress博客并发布在github.io上
 
- 1. 先在github上新建一个库用来存放博客代码。
- 2. 本地拉取这个库。
- 3. 用vscode打开项目，在终端执行`npm init -y`初始化项目，然后 `npm i vuepress`安装vuepress包。
- 4. 建立如下结构目录和文件
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190809134917107.png)
+1. 先在github上新建一个库用来存放博客代码。
+2. 本地拉取这个库。
+3. 用vscode打开项目，在终端执行`npm init -y`初始化项目，然后 `npm i vuepress`安装vuepress包。
+4. 建立如下结构目录和文件
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190809134917107.png)
 5. 在package.json中加入以下命令：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190809135237432.png)
 6. 执行`npm run dev:docs`就可以看到效果了

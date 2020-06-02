@@ -1,4 +1,4 @@
-## async和promise
+# async和promise
 
 ```html
 <!DOCTYPE html>

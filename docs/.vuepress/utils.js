@@ -41,6 +41,13 @@ exports.inferSiderbars = () => {
         }
       }).filter(item => item)
     }
+    children.sort((a,b)=>{
+      if(a.match(/\d+/g)&&b.match(/\d+/g)){
+        return a.match(/\d+/g)[0]-b.match(/\d+/g)[0]
+      }else{
+        return a-b
+      }
+    })
   })
   return sidebar
 }

@@ -1,6 +1,6 @@
-## 实现一个Promise/A+ 规范的Promise
-## 1.代码实现
+# 实现一个Promise/A+ 规范的Promise
 
+### 1.代码实现
 ```javascript
 // promise 三个状态
 const PENDING = 'pending';
@@ -221,7 +221,8 @@ Promisex.deferred = function() {
 module.exports = Promisex;
 ```
 最后执行promises-aplus-tests ./xxx.js进行测试
-## 2.例子
+
+### 2.例子
 ```javascript
 //不论 promise1 被 reject 还是被 resolve 时 promise2 都会被 resolve，只有出现异常时才会被 rejected。
 new Promisex((resolve, reject)=>{
@@ -240,8 +241,7 @@ new Promisex((resolve, reject)=>{
 })
 ```
 
-## 3.参考
-
+### 3.参考
 [Promise详解与实现（Promise/A+规范）](https://www.jianshu.com/p/459a856c476f)
 
 [Promises/A+规范（英文）](https://promisesaplus.com/)

@@ -1,4 +1,4 @@
-## vue自定义指令
+# vue自定义指令
 
 ```html
 <template>

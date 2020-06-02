@@ -1,17 +1,16 @@
-﻿## vuex总结
+﻿# vuex总结
 
 ![在这里插入图片描述](https://imgconvert.csdnimg.cn/aHR0cHM6Ly92dWV4LnZ1ZWpzLm9yZy92dWV4LnBuZw?x-oss-process=image/format,png)
 
-
-  - [1. 使用vuex](#_1-%e4%bd%bf%e7%94%a8vuex)
-  - [2. State](#_2-state)
-  - [3. Getters](#_3-getters)
-  - [4. mutation](#_4-mutation)
-  - [5. Action](#_5-action)
-  - [6. Mutation与Action差异](#_6-mutation%e4%b8%8eaction%e5%b7%ae%e5%bc%82)
-  - [7. Module](#_7-module)
+- [1. 使用vuex](#_1-%e4%bd%bf%e7%94%a8vuex)
+- [2. State](#_2-state)
+- [3. Getters](#_3-getters)
+- [4. mutation](#_4-mutation)
+- [5. Action](#_5-action)
+- [6. Mutation与Action差异](#_6-mutation%e4%b8%8eaction%e5%b7%ae%e5%bc%82)
+- [7. Module](#_7-module)
   
-#### **1. 使用vuex**
+## 1. 使用vuex
 ```js
 //main.js
 import store from './store.js';
@@ -56,8 +55,7 @@ watch: {
 },
 ```
 
-#### **2. State**
-
+## 2. State
 ```js
 //store.js
 state: {
@@ -101,9 +99,9 @@ export default {
   }
 }
 ```
-#### **3. Getters**
-可以认为是 store 的计算属性。就像计算属性一样，getter 的返回值会根据它的依赖被缓存起来，且只有当它的依赖值发生了改变才会被重新计算。
 
+## 3. Getters
+可以认为是 store 的计算属性。就像计算属性一样，getter 的返回值会根据它的依赖被缓存起来，且只有当它的依赖值发生了改变才会被重新计算。
 ```js
 //store.js
 getters: {
@@ -136,7 +134,8 @@ export default {
   }
 }
 ```
-#### **4. mutation**
+
+## 4. mutation
 Mutation 必须是同步函数
 ```js
 //store.js
@@ -176,7 +175,7 @@ export default {
 
 ```
 
-#### **5. Action**
+## 5. Action
 Action 类似于 mutation，不同在于：
  - Action 提交的是 mutation，而不是直接变更状态。
  -  Action 可以包含任意异步操作。
@@ -231,7 +230,8 @@ export default {
   }
 }
 ```
-#### **6. Mutation与Action差异**
+
+## 6. Mutation与Action差异
 Muation与Action作用是相同的，官网上说Mutation 必须是同步函数，Action处理异步函数。我觉得这是因为在vue devtool调试工具状态管理中，如果Mutation是异步函数，mutation 触发的时候，回调函数还没有被调用，devtools 不知道什么时候回调函数实际上被调用就会导致devtool中状态管理不可追踪，这个问题就会导致调试非常难。而在action中的异步函数中提交mutation是可以追踪状态的。
 总的来说，**使用devtool调试，异步函数在muation中状态是不可追踪的，在action中状态是可以追踪的**。如果你不使用devtool两者其实就是一样的，只不过mutation函数第一个参数是state，action 函数接受一个与 store 实例具有相同方法和属性的 context 对象。
 例子：
@@ -286,7 +286,8 @@ Muation与Action作用是相同的，官网上说Mutation 必须是同步函数�
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190901165522572.gif)
 点击action按钮，devtool中会记录异步执行时的状态。效果如下：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190901165711865.gif)
-#### 7. Module
+
+## 7. Module
 Vuex 允许我们将 store 分割成模块（module）。每个模块拥有自己的 state、mutation、action、getter、甚至是嵌套子模块
 
 ```js

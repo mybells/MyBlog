@@ -1,22 +1,22 @@
-## vueAPI总结
+# vueAPI总结
 
-  - [**1. Vue.nextTick( [callback, context] )**](#_1-vue-nexttick-callback-context)
-  - [**2. Vue.use( plugin )**](#_2-vue-use-plugin)
-  - [**3. Vue.observable( object )**](#_3-vue-observable-object)
-  - [**4. data**](#_4-data)
-  - [**5. propsData**](#_5-propsdata)
-  - [**6. watch**](#_6-watch)
-  - [**7.provide / inject**](#_7-provide-inject)
-  - [**8.name**](#_8name)
-  - [**9.delimiters**](#_9delimiters)
-  - [**10.model**](#_10model)
-  - [**11. inheritAttrs**](#_11-inheritattrs)
-  - [**12. vm.$attrs**](#_12-vm-attrs)
-  - [**13. vm.$listeners**](#_14-vm-listeners)
-  - [**14. vm.$forceUpdate()**](#_14-vm-forceupdate)
-  - [**15. keep-alive**](#_15-keep-alive)
+  - [1. Vue.nextTick( [callback, context] )](#_1-vue-nexttick-callback-context)
+  - [2. Vue.use( plugin )](#_2-vue-use-plugin)
+  - [3. Vue.observable( object )](#_3-vue-observable-object)
+  - [4. data](#_4-data)
+  - [5. propsData](#_5-propsdata)
+  - [6. watch](#_6-watch)
+  - [7. provide/inject](#_7-provide-inject)
+  - [8. name](#_8name)
+  - [9. delimiters](#_9delimiters)
+  - [10. model](#_10model)
+  - [11. inheritAttrs](#_11-inheritattrs)
+  - [12. vm.$attrs](#_12-vm-attrs)
+  - [13. vm.$listeners](#_14-vm-listeners)
+  - [14. vm.$forceUpdate()](#_14-vm-forceupdate)
+  - [15. keep-alive](#_15-keep-alive)
   
-#### **1. Vue.nextTick( [callback, context] )**
+## 1. Vue.nextTick( [callback, context] )
 ```js
 // 作为一个 Promise 使用 (2.1.0 起新增，详见接下来的提示)
 Vue.nextTick()
@@ -26,7 +26,7 @@ Vue.nextTick()
 ```
 2.1.0 起新增：如果没有提供回调且在支持 Promise 的环境中，则返回一个 Promise。请注意 Vue 不自带 Promise 的 polyfill，所以如果你的目标浏览器不原生支持 Promise (IE：你们都看我干嘛)，你得自己提供 polyfill。
 
-#### **2. Vue.use( plugin )**
+## 2. Vue.use( plugin )
 参数：
 {Object | Function} plugin
 
@@ -37,7 +37,7 @@ Vue.nextTick()
 
 当 install 方法被同一个插件多次调用，插件将只会被安装一次。
 
-#### **3. Vue.observable( object )**
+## 3. Vue.observable( object )
 **2.6.0 新增**
 
 参数：
@@ -61,10 +61,10 @@ const Demo = {
 ```
 在 Vue 2.x 中，被传入的对象会直接被 Vue.observable 改变，所以如这里展示的，它和被返回的对象是同一个对象。在 Vue 3.x 中，则会返回一个可响应的代理，而对源对象直接进行修改仍然是不可响应的。因此，为了向前兼容，我们推荐始终操作使用 Vue.observable 返回的对象，而不是传入源对象。
 
-#### **4. data**
+## 4. data
 以 _ 或 $ 开头的属性 不会 被 Vue 实例代理，因为它们可能和 Vue 内置的属性、API 方法冲突。你可以使用例如 vm.$data._property 的方式访问这些属性。所以this._aaa将拿不到data中_aaa的数据，只能this.\$data._aaa
 
-#### **5. propsData**
+## 5. propsData
 类型：`{ [key: string]: any }`
 
 限制：只用于 new 创建的实例中。
@@ -85,7 +85,7 @@ var vm = new Comp({
   }
 })
 ```
-#### **6. watch**
+## 6. watch
 类型：{ [key: string]: string | Function | Object | Array }
 
 详细：
@@ -141,7 +141,7 @@ var vm = new Vue({
 })
 vm.a = 2 // => new: 2, old: 1
 ```
-#### **7.provide / inject**
+## 7.provide/inject
 2.2.0 新增
 这对选项需要一起使用，以允许一个祖先组件向其所有子孙后代注入一个依赖，不论组件层次有多深，并在起上下游关系成立的时间里始终生效。如果你熟悉 React，这与 React 的上下文特性很相似。
 
@@ -188,7 +188,7 @@ var Child = {
 > 提示：provide 和 inject
 > 绑定并不是可响应的。这是刻意为之的。然而，如果你传入了一个可监听的对象，那么其对象的属性还是可响应的。
 > 
-#### **8.name**
+## 8.name
 类型：string
 
 限制：只有作为组件选项时起作用。
@@ -196,7 +196,7 @@ var Child = {
 详细：
 允许组件模板递归地调用自身。注意，组件在全局用 Vue.component() 注册时，全局 ID 自动作为组件的 name。
 
-#### **9.delimiters**
+## 9.delimiters
 类型：`Array<string>`
 默认值：`["{{", "}}"]`
 限制：这个选项只在完整构建版本中的浏览器内编译时可用。
@@ -208,7 +208,7 @@ new Vue({
 })
 // 分隔符变成了 ES6 模板字符串的风格
 ```
-#### **10.model**
+## 10.model
 2.2.0 新增
 类型：{ prop?: string, event?: string }
 详细：
@@ -242,7 +242,7 @@ Vue.component('my-checkbox', {
   value="some value">
 </my-checkbox>
 ```
-#### **11. inheritAttrs**
+## 11. inheritAttrs
 2.4.0 新增
 类型：boolean
 默认值：true
@@ -251,7 +251,7 @@ Vue.component('my-checkbox', {
 
 注意：这个选项不影响 class 和 style 绑定。
 
-#### **12. vm.$attrs**
+## 12. vm.$attrs
 
 2.4.0 新增
 类型：{ [key: string]: string }
@@ -259,7 +259,7 @@ Vue.component('my-checkbox', {
 详细：
 包含了父作用域中不作为 prop 被识别 (且获取) 的特性绑定 (class 和 style 除外)。当一个组件没有声明任何 prop 时，这里会包含所有父作用域的绑定 (class 和 style 除外)，并且可以通过 v-bind="$attrs" 传入内部组件——在创建高级别的组件时非常有用。
 
-#### **13. vm.$listeners**
+## 13. vm.$listeners
 
 2.4.0 新增
 类型：`{ [key: string]: Function | Array<Function> }`
@@ -268,10 +268,10 @@ Vue.component('my-checkbox', {
 包含了父作用域中的 (不含 .native 修饰器的) v-on 事件监听器。它可以通过 v-on="$listeners" 传入内部组件——在创建更高层次的组件时非常有用。
 vue2.4中，引入了\$attrs 和$listeners ， 新增了inheritAttrs，使用方法：[https://blog.csdn.net/songxiugongwang/article/details/84001967](https://blog.csdn.net/songxiugongwang/article/details/84001967)
 
-#### **14. vm.$forceUpdate()**
+## 14. vm.$forceUpdate()
 迫使 Vue 实例重新渲染。注意它仅仅影响实例本身和插入插槽内容的子组件，而不是所有子组件。
 
-#### [**15. keep-alive**](https://cn.vuejs.org/v2/api/#keep-alive)
+## [15. keep-alive](https://cn.vuejs.org/v2/api/#keep-alive)
 
 
 

@@ -1,4 +1,7 @@
-## vue中使用vuerouter遇到的问题
+# vue中使用vuerouter遇到的问题
+
+- [1.[Vue warn]: Unknown custom element: \<router-link>](#1vue-warn-unknown-custom-element-router-link)
+- [2.[Vue warn]: $listeners and $attrs is readonly](#2vue-warn-listeners-and-attrs-is-readonly)
 
 ## 1.[Vue warn]: Unknown custom element: \<router-link>
 vue项目中引入了vue-router报了如下第一个错误：

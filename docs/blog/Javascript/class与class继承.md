@@ -1,4 +1,4 @@
-## class与class继承
+# class与class继承
 
 ```html
 <!DOCTYPE html>

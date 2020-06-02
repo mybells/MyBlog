@@ -1,4 +1,4 @@
-## vue和webpack配合常用package
+# vue和webpack配合常用package
 
 ```js
   "devDependencies": {

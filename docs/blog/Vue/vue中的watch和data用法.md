@@ -1,4 +1,4 @@
-## vue中的watch和data用法
+# vue中的watch和data用法
 
 ```js
   export default {

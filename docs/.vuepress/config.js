@@ -37,8 +37,8 @@ module.exports = {
     // 可选，默认为 master
     docsBranch: 'master',
     // 默认为 true，设置为 false 来禁用
-    editLinks: false,
-    sidebarDepth: 0,
+    editLinks: true,
+    sidebarDepth: 1,
     lastUpdated: 'Last Updated', // 文档更新时间：每个文件git最后提交的时间
   },
   configureWebpack: (config, isServer) => {
@@ -51,6 +51,7 @@ module.exports = {
         },
         devServer: {
           open: true,
+          hot: true,
           https: true
         }
       }

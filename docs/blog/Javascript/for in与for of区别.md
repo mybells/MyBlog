@@ -1,4 +1,4 @@
-## for in与for of区别
+# for in与for of区别
 
 ```js
 //for..in.. :

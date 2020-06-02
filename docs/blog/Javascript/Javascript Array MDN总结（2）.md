@@ -1,4 +1,4 @@
-## Javascript Array MDN总结（2）
+# Javascript Array MDN总结（2）
 
 [[toc]]
 ### 1.Array.from()
