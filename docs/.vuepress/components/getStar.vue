@@ -62,7 +62,7 @@ export default {
       this.getData()
     },
     getData() {
-      axios.get(`https://api.github.com/users/${this.name}/starred?page=${this.page}&per_page=100`).then(res => {
+      axios.get(`https://api.github.com/users/${this.name}/starred?page=${this.page}&per_page=100`,{headers: {Accept: 'application/vnd.github.v3+json'}}).then(res => {
         let arr = res.data
         if (arr && arr.length) {
           arr.reduce((monitor, item) => {

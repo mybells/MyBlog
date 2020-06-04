@@ -32,7 +32,7 @@ exports.inferSiderbars = () => {
             if (name.endsWith('.md') && fs.statSync(path.join(path.join(dirpath, item), name)).isFile()) {
               return `${item}/${name}`;
             }
-          })
+          }).filter(item => item)
           return {
             title,
             children,
@@ -41,11 +41,11 @@ exports.inferSiderbars = () => {
         }
       }).filter(item => item)
     }
-    children.sort((a,b)=>{
-      if(a.match(/\d+/g)&&b.match(/\d+/g)){
-        return a.match(/\d+/g)[0]-b.match(/\d+/g)[0]
-      }else{
-        return a-b
+    children.sort((a, b) => {
+      if (a.match(/\d+/g) && b.match(/\d+/g)) {
+        return a.match(/\d+/g)[0] - b.match(/\d+/g)[0]
+      } else {
+        return a - b
       }
     })
   })
