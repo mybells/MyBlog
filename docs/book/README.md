@@ -2,6 +2,7 @@
 - [第1章 了解Web及网络基础](./图解HTTP/第1章%20了解Web及网络基础.md)
 - [第2章 简单的HTTP协议](./图解HTTP/第2章%20简单的HTTP协议.md)
 - [第3章 HTTP报文内的HTTP信息](./图解HTTP/第3章%20HTTP报文内的HTTP信息.md)
+- [第4章 返回结果的HTTP状态码](./图解HTTP/第4章%20返回结果的HTTP状态码.md)
 
 
 # 学习 Javascript 数据结构与算法
