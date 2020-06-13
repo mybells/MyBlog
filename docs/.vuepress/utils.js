@@ -4,7 +4,7 @@ const fs = require('fs')
 const sidebarMap = [
   // { title: 'Someonestars', dirname: 'getsomeonestars', flag: 1 },
   { title: 'Mystars', dirname: 'mystars', flag: 1 },
-  { title: 'Blog', dirname: 'blog', flag: 0 },
+  { title: 'Blog', dirname: 'blog', flag: 0, collapsable: true },
   { title: 'BookStore', dirname: 'book', flag: 0, collapsable: true },
 ]
 exports.inferSiderbars = () => {
@@ -32,7 +32,13 @@ exports.inferSiderbars = () => {
             if (name.endsWith('.md') && fs.statSync(path.join(path.join(dirpath, item), name)).isFile()) {
               return `${item}/${name}`;
             }
-          }).filter(item => item)
+          }).filter(item => item).sort((a, b) => {
+            if (a.match(/\d+/g) && b.match(/\d+/g)) {
+              return a.match(/\d+/g)[0] - b.match(/\d+/g)[0]
+            } else {
+              return a - b
+            }
+          })
           return {
             title,
             children,
@@ -41,13 +47,6 @@ exports.inferSiderbars = () => {
         }
       }).filter(item => item)
     }
-    children.sort((a, b) => {
-      if (a.match(/\d+/g) && b.match(/\d+/g)) {
-        return a.match(/\d+/g)[0] - b.match(/\d+/g)[0]
-      } else {
-        return a - b
-      }
-    })
   })
   return sidebar
 }
