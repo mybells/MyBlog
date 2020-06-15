@@ -182,3 +182,75 @@ Cache-Control: private, community="UCI"
 如上例，Cache-Control 首部字段本身没有 community 这个指令。借助 extension tokens 实现了该指令的添加。如果缓存服务器不能理解 community 这个新指令，就会直接忽略。因此，extension tokens 仅对能理解它的缓存服务器来说是有意义的。
 
 ### Connection
+Connection有两个作用：    
+- 控制不在转发给代理的首部字段
+- 管理持久连接
+
+#### 控制代理不再转发的首部字段
+![Connection1](/images/HTTP图解/6Connection1.png)   
+> Connection: 不再转发的首部字段名
+
+在客户端发送请求和服务器返回响应内，使用Connection首部字段，可控制不再转发给代理的首部字段（Hop-by-hop首部，共有8个值）。
+
+#### 管理持久连接
+> Connection: close
+
+HTTP/1.1版本的默认连接都是持久连接。客户端会在持久连接上连续发送请求。当服务器想明确断开连接时，则指定Connection首部字段值为close。
+![Connection2](/images/HTTP图解/6Connection2.png)   
+
+**HTTP/1.1之前的HTTP版本的默认连接都是非持久连接。所以想要在旧版本的HTTP协议上维持持久连接，则需要指定Connection首部字段的值为Keep-Alive。**
+
+### Date
+首部字段Date表明创建HTTP报文的日期和时间。
+> Date: Tue, 03 Jul 2012 04:40:59 GMT
+
+### Pragma
+Pragma是HTTP/1.1之前版本的历史遗留字段，仅作为与HTTP/1.0的向后兼容而定义。
+> Pragma: no-cache
+
+该首部字段属于通用首部字段，但只用在客户端发送的请求中。客户端会要求所有的中间服务器不返回缓存的资源。
+
+整体掌握全部中间服务器使用的HTTP协议版本是不现实的。所以发送时会同时有两个首部字段：  
+```
+Cache-Control: no-cache
+Pragma: no-cache
+```
+
+### Trailer
+![Trailer](/images/HTTP图解/6Trailer.png)   
+Trailer会事先说明在报文主体后记录了哪些首部字段。可用在HTTP/1.1版本分块传输编码时。
+
+![Trailer2](/images/HTTP图解/6Trailer2.png)   
+上面代码中，指定Trailer值为Expires，在报文主体之后出现了首部字段Expires。
+
+### Transfer-Encoding
+![Transfer-Encoding](/images/HTTP图解/6Transfer-Encoding.png)   
+规定了传输报文主体时采用的编码方式。
+
+HTTP/1.1的传输编码方式仅对分块传输编码有效。
+
+> Transfer-Encoding: chunked
+
+### Upgrade
+Upgrade用于检测HTTP协议及其他协议是否可使用更高的版本进行通信，其参数值可以用来指定一个完全不同的协议。
+![Upgrade](/images/HTTP图解/6Upgrade.png)   
+
+图中，**Upgrade首部字段产生作用的Upgrade对象仅限于客户端和邻接服务器之间。因此，使用首部字段Upgrade时，还需要额外指定Connection: Upgrade。**
+
+对于附有Upgrade的请求，服务器可用101 Switching Protocols状态码作为响应返回。
+
+### Via
+使用Via是为了追踪客户端与服务器间的请求和响应报文的传输路径。   
+报文经过代理或网关时，会先在首部字段Via中附加该服务器的信息再进行转发。   
+Via不仅用于追踪报文的转发，还可避免请求回环的发生。所以必须在经过代理时附加该首部字段内容。
+
+![Via](/images/HTTP图解/6Via.png)   
+上面的1.0是指接收请求的服务器上应用的HTTP协议版本。
+
+### Warning
+HTTP/1.1的Warning首部是从HTTP/1.0的响应首部（Retry-After）演变过来的。该首部通常会告知用户一些与缓存相关的问题的警告。
+
+![Warning](/images/HTTP图解/6Warning.png)   
+![Warning警告码](/images/HTTP图解/6Warning警告码.png)   
+
+## 4. 请求首部字段
