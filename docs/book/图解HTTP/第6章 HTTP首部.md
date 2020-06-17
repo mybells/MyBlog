@@ -254,3 +254,65 @@ HTTP/1.1的Warning首部是从HTTP/1.0的响应首部（Retry-After）演变过�
 ![Warning警告码](/images/HTTP图解/6Warning警告码.png)   
 
 ## 4. 请求首部字段
+请求首部字段是请求报文中所使用的字段，用于补充请求的附加信息、客户端信息、对响应内容相关的优先级等内容。
+
+### Accept
+![Accept](/images/HTTP图解/6Accept.png)   
+可以通知服务器，用户代理能够处理的媒体类型及媒体类型的相对优先级。
+
+使用q=可以给媒体类型增加权重优先级，用分号进行分隔。权重值的范围是0~1,默认为q=1.0。当服务器提供多种内容时，将会首先返回权重值最高的媒体类型。
+
+### Accept-Charset
+![Accept-Charset](/images/HTTP图解/6Accept-Charset.png)   
+可以通知服务器用户代理支持的字符集及字符集的相对优先顺序。
+
+### Accept-Encoding
+![Accept-Encoding](/images/HTTP图解/6Accept-Encoding.png)   
+用来告知服务器用户代理支持的内容编码及内容编码的优先级顺序。
+- gzip
+- compress
+- deflate
+- identity：不执行压缩
+
+可以使用*作为通配符，指定任意的编码格式。
+
+### Accept-Language
+![Accept-Language](/images/HTTP图解/6Accept-Language.png)   
+用来告知服务器用户代理能够处理的自然语言集（中文或英文等），以及语言集的相对优先级。
+
+### Authorization
+![Authorization](/images/HTTP图解/6Authorization.png)   
+用来告知服务器，用户代理的认证信息。想要通过服务器认证的用户代理会在接收到返回的401状态码响应后，把首部字段Authorization加入请求中。
+
+### Expect
+![Expect](/images/HTTP图解/6Expect.png)   
+来告知服务器，期望出现的某种特定行为。因服务器无法理解客户端的期望做出回应而发生错误时，会返回状态码417 Expectation Failed。
+
+客户端可以利用该首部字段，写明所期望的扩展。虽然HTTP/1.1规范只定义了100-continue。
+
+### From
+![From](/images/HTTP图解/6From.png)   
+用来告知服务器使用用户代理的用户的电子邮件地址。通常其目的就是为了显示搜索引擎等用户代理的负责人的电子邮件联系方式。
+
+### Host
+![Host](/images/HTTP图解/6Host.png)   
+告知服务器，请求的资源所处的互联网主机名和端口号。**Host首部字段在HTTP/1.1规范内是唯一一个必须包含在请求内的首部字段。**
+
+Host和以单台服务器分配多个域名的虚拟主机的工作机制有很密切的关联，这是Host必须存在的意义。
+
+请求被发送至服务器时，请求中的主机名会直接被用IP地址直接替换掉。**但如果这时，相同的IP地址下部署运行多个域名，那么服务器就会无法理解究竟是哪个域名对应的请求。因此，就需要使用Host来明确指出请求的主机名。**
+
+### If-Match
+![If-Match](/images/HTTP图解/6If-Match.png)   
+形如If-xxx这样的请求首部字段，都可称为条件请求。服务器接收到附带条件的请求后，只有判断指定条件为真时，才会执行请求。
+![If-Match-ETag](/images/HTTP图解/6If-Match-ETag.png)   
+
+服务器会对比If-Match的字段值和ETag的值，仅当两者一致时，才会执行请求。否则返回412 Precondition Failed的响应。还可以使用*指定If-Match的字段值。服务器会忽略ETag的值，只要资源存在就处理请求。
+
+### If-Modified-Since
+![If-Modified-Since](/images/HTTP图解/6If-Modified-Since.png)   
+它会告知服务器若If-Modified-Since字段值早于资源的更新时间，则希望能处理该请求。否则，如果请求的资源都没有过更新，则返回状态码304 Not Modified的响应。
+
+If-Modified-Since用于确认代理或客户端拥有的本地资源的有效性。获取资源的更新日期时间，可通过确认首部字段Last-Modified来确定。
+
+### If-None-Match
