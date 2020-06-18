@@ -316,3 +316,57 @@ Host和以单台服务器分配多个域名的虚拟主机的工作机制有很�
 If-Modified-Since用于确认代理或客户端拥有的本地资源的有效性。获取资源的更新日期时间，可通过确认首部字段Last-Modified来确定。
 
 ### If-None-Match
+![If-None-Match](/images/HTTP图解/6If-None-Match.png)   
+它和If-Match作用相反。用于指定If-None-Match字段值的实体标记（ETag）值与请求资源的ETag不一致时，它就告知服务器处理该请求。
+
+在GET或HEAD方法中使用If-None-Match可获取最新的资源。
+
+### If-Range
+![If-Range](/images/HTTP图解/6If-Range.png)   
+告知服务器若指定的If-Range字段值和请求资源的ETag值相同时，则作为范围请求处理。否则，返回全体资源。
+
+![If-Rangex](/images/HTTP图解/6If-Rangex.png)   
+服务器端的资源如果更新，那客户端持有资源中的一部分也会随之无效。这时，服务器会暂且以状态码412 Precondition Failed作为响应返回，其目的是催促客户端再次发送请求。与使用首部字段If-Range比起来，就要花费两倍的功夫。
+
+### If-Unmodified-Since
+> If-Unmodified-Since: Thu,03 Jul 2012 00:00:00 GMT
+If-Unmodified-Since和If-Modified-Since作用相反。它的作用是告知服务器，指定的请求资源只有在字段值内指定的日期时间之后，未发生更新的情况下，才能处理请求。如果指定的时间发生了更新，则以状态码412 Precodition Failed作为响应返回。
+
+### Max-Forwards
+![Max-Forwards](/images/HTTP图解/6Max-Forwards.png)   
+通过TRACE或OPTIONS方法，发送包含Max-Forwards的请求时，该字段以十进制整数形式指定可经过的服务器最大数目。服务器在往下一个服务器转发请求之前，会将Max-Forward上的值减1后重新赋值。当服务器接收到Max-Forwards值为0的请求时，则不再进行转发，而是直接返回响应。
+
+可以通过它来对传输路径的通信状况有所把握。
+![Max-Forwardsx1](/images/HTTP图解/6Max-Forwardsx1.png)   
+![Max-Forwardsx2](/images/HTTP图解/6Max-Forwardsx2.png)   
+
+### Proxy-Authorization
+> Proxy-Authorization: Basic ksdfjadksdj
+接收到从**代理服务器发来的认证质询**时客户端会发送包含首部字段Proxy-Authorization的请求，以告知服务器认证所需要的信息。
+
+这个行为是与客户端和服务端之间的HTTP访问认证相类似的，不同的是，认证行为发生在客户端和代理之间。客户端和服务器间的认证，使用Authorization可起到相同的作用。
+
+### Range
+> Range: bytes=5001-10000
+对于只需获取部分资源的范围请求，包含首部字段Range即可告知服务器资源的指定范围。
+
+接收到附带Range首部字段请求的服务器，会在处理请求之后返回状态码为206 Partial Content的响应。无法处理该范围请求时，则会返回200 OK的响应及全部资源。
+
+### Referer
+![Referer](/images/HTTP图解/6Referer.png)   
+会告知服务器请求的原始资源的URI。
+
+客户端一般都会发送Referer给服务器。但当直接在浏览器的地址栏输入URI，或出于安全性的考虑时，也可以不发送该字段。因为原始资源的URI中的查询字符串可能含有ID和密码等保密信息，写进Referer会导致信息泄露。
+
+### TE
+> TE: gzip, deflate;q=0.5
+TE会告知服务器客户端能够处理响应的**传输编码方式**及相对优先级。它和Accept-Encoding很像，但用于传输编码。
+
+### User-Agent
+![User-Agent](/images/HTTP图解/6User-Agent.png)   
+User-Agent会将创建请求的浏览器和用户代理名称等信息传达给服务器。
+
+## 响应首部字段
+响应首部字段是由服务器端向客户端返回响应报文中所使用的字段，用于补充响应的附加信息、服务器信息，以及对客户端的附加要求等信息。
+
+### Accept-Ranges
