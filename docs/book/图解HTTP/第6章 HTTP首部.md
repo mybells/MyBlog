@@ -370,3 +370,63 @@ User-Agent会将创建请求的浏览器和用户代理名称等信息传达给�
 响应首部字段是由服务器端向客户端返回响应报文中所使用的字段，用于补充响应的附加信息、服务器信息，以及对客户端的附加要求等信息。
 
 ### Accept-Ranges
+![Accept-Ranges](/images/HTTP图解/6Accept-Ranges.png)   
+告知客户端，服务器能否处理范围请求，以指定获取服务器端某个部分的资源。可以指定两个值，可处理范围请求时指定为bytes，反之则指定为none。
+
+### Age
+![Age](/images/HTTP图解/6Age.png)   
+告知客户端，源服务器在多久前创建了响应。单位为秒。
+
+若创建该响应的服务器是缓存服务器，Age值是指缓存后的响应再次发起认证到认证完成的时间值。代理创建响应时必须加上首部字段Age。
+
+### ETag
+![ETag](/imETags/HTTP图解/6ETag.png)   
+ETag能告知客户端实体标识。服务器会为每份资源分配对应的ETag值。
+
+当资源更新时，ETag也需要更新。    
+![ETag2](/imETags/HTTP图解/6ETag2.png)    
+资源被缓存时，就会被分配唯一的标识。若在下载过程中出现连接中断、再连接的情况，都会依照ETag值来指定资源。
+
+#### 强ETag值和弱ETag值
+**强ETag值**
+不论发生多么细微的变化都会改变其值。
+> ETag: "usagi-1234"
+
+**弱ETag值**
+只用于提示资源是否相同。只有资源发生了根本改变，产生差异时才会改变ETag值。会在字段值开始处附加W/。
+> ETag: W/"usagi-1234"
+
+### Location
+![Location](/imETags/HTTP图解/6Location.png)    
+Location可将响应接收方引导至某个与请求URI位置不同的资源。该字段会配合3XX: Redirection的响应，提供重定向的URI。
+
+### Proxy-Authenticate（认证）
+> Proxy-Authenticate: Basic realm="Usagidesign Auth"
+Proxy-Authenticate会把代理服务器所要求的认证信息发送给客户端。
+
+它与客户端和服务器间的HTTP访问认证的行为相似，不同之处在于其认证行为是在客户端与代理间进行。而客户端与服务器间进行认证时，WWW-Authorization有着相同的作用。
+
+### Retry-After
+![Retry-After](/imETags/HTTP图解/6Retry-After.png)    
+告知客户端应该在多久之后再次发送请求。主要配合状态码503 Service Unavailable 响应，或3XX Redirect响应一起使用。字段值可以指定具体的日期时间（Wed, 04 Jul 2012 0:34:23 GMT等格式），也可以是创建响应后的秒数。
+
+### Server
+![Server](/imETags/HTTP图解/6Server.png)    
+告知客户端当前服务器上安装的HTTP服务器应用程序的信息。
+
+### Vary
+![Vary](/imETags/HTTP图解/6Vary.png)    
+首部字段Vary可以对缓存进行控制。源服务器会向代理服务器传达关于本地缓存使用方法的命令。
+
+从代理服务器接收到源服务器返回包含Vary指定项的响应后，若再要进行缓存，仅对请求中含有相同Vary指定首部字段的请求返回缓存。即使对相同资源发起请求，但由于Vary指定的首部字段不同，因此必须要从源服务器重新获取资源。
+
+### WWW-Authenticate
+> WWW-Authenticate: Basic realm="Usagidesign Auth"
+用于HTTP访问认证。会告知客户端适用于访问请求URI所指定资源的认证方案（Basic或Digest）和带参数提示的质询。状态码401 Unauthorized响应中，肯定带有WWW-Authenticate。
+
+## 实体首部字段
+实体首部字段是包含在请求报文和响应报文中的实体部分所使用的首部，用于补充内容的更新时间等于实体相关的信息。
+
+### Allow
+![Allow](/imETags/HTTP图解/6Allow.png)    
+
