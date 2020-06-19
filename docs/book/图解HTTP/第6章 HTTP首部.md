@@ -429,4 +429,52 @@ Proxy-Authenticate会把代理服务器所要求的认证信息发送给客户�
 
 ### Allow
 ![Allow](/imETags/HTTP图解/6Allow.png)    
+用于通知客户端能够支持Request-URI指定资源的所有HTTP方法。当服务器接收到不支持的HTTP方法时，会以405 Method Not Allowed作为响应返回。
 
+### Content-Encoding
+> Content-Encoding: gzip
+会告知客户端服务器对实体的主体部分选用的内容编码方式。主要使用以下4中方式：
+- gzip
+- compress
+- deflate
+- identity
+
+### Content-Language
+> Content-Language: zh-CN
+会告知客户端，实体主体使用的自然语言。
+
+### Content-Length
+> Content-Length: 15000
+表明了实体主体部分的大小。对实体主体进行内容编码传输时，不能再使用Content-Length。
+
+### Content-Location
+> Content-Location: http://www.hackr.jp/xx.html
+给出与报文主体部分相对应的URI。和Location不同，Content-Location表示的是报文主体返回资源对应的URI。
+
+### Contnet-MD5
+![Content-MD5](/imETags/HTTP图解/6Content-MD5.png)    
+Content-MD5是一串由MD5算法生成的值，其目的在于检查报文主体在传输过程中是否保持完整，以及确认传输到达。
+
+### Content-Range
+![Content-Range](/imETags/HTTP图解/6Content-Range.png)    
+针对范围请求，返回响应时使用的首部字段Content-Range，能告知客户端作为响应返回的实体的那个部分符合范围请求。字段值以字节为单位，表示当前发送部分及整个实体大小。
+
+### Content-Type
+> Content-Type: text/html; charset=UTF-8
+说明了实体主体内对象的媒体类型。
+
+### Expires
+![Expires](/imETags/HTTP图解/6Expires.png)    
+Expires会将资源失效的日期告知客户端。缓存服务器在接收到含有Expires的响应后，会以缓存来应答请求，在Expires指定的时间之前，响应的副本会一直被保存。当超过指定的时间后，缓存服务器在请求发送过来时，会转向源服务器请求资源。
+
+当Cache-Control有指定max-age指令时，比起Expires，会优先处理max-age指令。
+
+### Last-Modified
+![Last-Modified](/imETags/HTTP图解/6Last-Modified.png)    
+指明资源最终修改的时间。
+
+## 为Cookie服务的首部字段
+Cookie的工作机制是用户识别及状态管理。
+![为Cookie服务的首部字段](/imETags/HTTP图解/6为Cookie服务的首部字段.png)    
+
+### Set-Cookie
