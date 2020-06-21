@@ -6,6 +6,12 @@
 - [第3章 HTTP报文内的HTTP信息](./图解HTTP/第3章%20HTTP报文内的HTTP信息.md)
 - [第4章 返回结果的HTTP状态码](./图解HTTP/第4章%20返回结果的HTTP状态码.md)
 - [第5章 与HTTP协作的Web服务器](./图解HTTP/第5章%20与HTTP协作的Web服务器.md)
+- [第6章 HTTP首部](./图解HTTP/第6章%20HTTP首部.md)
+- [第7章 确保Web安全的HTTPS](./图解HTTP/第7章%20确保Web安全的HTTPS.md)
+- [第8章 确认访问用户身份的认证](./图解HTTP/第8章%20确认访问用户身份的认证.md)
+- [第9章 基于HTTP的功能追加协议](./图解HTTP/第9章%20基于HTTP的功能追加协议.md)
+- [第10章 构建Web内容的技术](./图解HTTP/第10章%20构建Web内容的技术.md)
+- [第11章 Web的攻击技术](./图解HTTP/第11章%20Web的攻击技术.md)
 
 
 ## 学习 Javascript 数据结构与算法

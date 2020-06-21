@@ -366,7 +366,7 @@ TE会告知服务器客户端能够处理响应的**传输编码方式**及相�
 ![User-Agent](/images/HTTP图解/6User-Agent.png)   
 User-Agent会将创建请求的浏览器和用户代理名称等信息传达给服务器。
 
-## 响应首部字段
+## 5. 响应首部字段
 响应首部字段是由服务器端向客户端返回响应报文中所使用的字段，用于补充响应的附加信息、服务器信息，以及对客户端的附加要求等信息。
 
 ### Accept-Ranges
@@ -380,11 +380,11 @@ User-Agent会将创建请求的浏览器和用户代理名称等信息传达给�
 若创建该响应的服务器是缓存服务器，Age值是指缓存后的响应再次发起认证到认证完成的时间值。代理创建响应时必须加上首部字段Age。
 
 ### ETag
-![ETag](/imETags/HTTP图解/6ETag.png)   
+![ETag](/images/HTTP图解/6ETag.png)   
 ETag能告知客户端实体标识。服务器会为每份资源分配对应的ETag值。
 
 当资源更新时，ETag也需要更新。    
-![ETag2](/imETags/HTTP图解/6ETag2.png)    
+![ETag2](/images/HTTP图解/6ETag2.png)    
 资源被缓存时，就会被分配唯一的标识。若在下载过程中出现连接中断、再连接的情况，都会依照ETag值来指定资源。
 
 #### 强ETag值和弱ETag值
@@ -397,7 +397,7 @@ ETag能告知客户端实体标识。服务器会为每份资源分配对应的E
 > ETag: W/"usagi-1234"
 
 ### Location
-![Location](/imETags/HTTP图解/6Location.png)    
+![Location](/images/HTTP图解/6Location.png)    
 Location可将响应接收方引导至某个与请求URI位置不同的资源。该字段会配合3XX: Redirection的响应，提供重定向的URI。
 
 ### Proxy-Authenticate（认证）
@@ -407,15 +407,15 @@ Proxy-Authenticate会把代理服务器所要求的认证信息发送给客户�
 它与客户端和服务器间的HTTP访问认证的行为相似，不同之处在于其认证行为是在客户端与代理间进行。而客户端与服务器间进行认证时，WWW-Authorization有着相同的作用。
 
 ### Retry-After
-![Retry-After](/imETags/HTTP图解/6Retry-After.png)    
+![Retry-After](/images/HTTP图解/6Retry-After.png)    
 告知客户端应该在多久之后再次发送请求。主要配合状态码503 Service Unavailable 响应，或3XX Redirect响应一起使用。字段值可以指定具体的日期时间（Wed, 04 Jul 2012 0:34:23 GMT等格式），也可以是创建响应后的秒数。
 
 ### Server
-![Server](/imETags/HTTP图解/6Server.png)    
+![Server](/images/HTTP图解/6Server.png)    
 告知客户端当前服务器上安装的HTTP服务器应用程序的信息。
 
 ### Vary
-![Vary](/imETags/HTTP图解/6Vary.png)    
+![Vary](/images/HTTP图解/6Vary.png)    
 首部字段Vary可以对缓存进行控制。源服务器会向代理服务器传达关于本地缓存使用方法的命令。
 
 从代理服务器接收到源服务器返回包含Vary指定项的响应后，若再要进行缓存，仅对请求中含有相同Vary指定首部字段的请求返回缓存。即使对相同资源发起请求，但由于Vary指定的首部字段不同，因此必须要从源服务器重新获取资源。
@@ -424,11 +424,11 @@ Proxy-Authenticate会把代理服务器所要求的认证信息发送给客户�
 > WWW-Authenticate: Basic realm="Usagidesign Auth"
 用于HTTP访问认证。会告知客户端适用于访问请求URI所指定资源的认证方案（Basic或Digest）和带参数提示的质询。状态码401 Unauthorized响应中，肯定带有WWW-Authenticate。
 
-## 实体首部字段
+## 6. 实体首部字段
 实体首部字段是包含在请求报文和响应报文中的实体部分所使用的首部，用于补充内容的更新时间等于实体相关的信息。
 
 ### Allow
-![Allow](/imETags/HTTP图解/6Allow.png)    
+![Allow](/images/HTTP图解/6Allow.png)    
 用于通知客户端能够支持Request-URI指定资源的所有HTTP方法。当服务器接收到不支持的HTTP方法时，会以405 Method Not Allowed作为响应返回。
 
 ### Content-Encoding
@@ -452,11 +452,11 @@ Proxy-Authenticate会把代理服务器所要求的认证信息发送给客户�
 给出与报文主体部分相对应的URI。和Location不同，Content-Location表示的是报文主体返回资源对应的URI。
 
 ### Contnet-MD5
-![Content-MD5](/imETags/HTTP图解/6Content-MD5.png)    
+![Content-MD5](/images/HTTP图解/6Content-MD5.png)    
 Content-MD5是一串由MD5算法生成的值，其目的在于检查报文主体在传输过程中是否保持完整，以及确认传输到达。
 
 ### Content-Range
-![Content-Range](/imETags/HTTP图解/6Content-Range.png)    
+![Content-Range](/images/HTTP图解/6Content-Range.png)    
 针对范围请求，返回响应时使用的首部字段Content-Range，能告知客户端作为响应返回的实体的那个部分符合范围请求。字段值以字节为单位，表示当前发送部分及整个实体大小。
 
 ### Content-Type
@@ -464,17 +464,68 @@ Content-MD5是一串由MD5算法生成的值，其目的在于检查报文主体
 说明了实体主体内对象的媒体类型。
 
 ### Expires
-![Expires](/imETags/HTTP图解/6Expires.png)    
+![Expires](/images/HTTP图解/6Expires.png)    
 Expires会将资源失效的日期告知客户端。缓存服务器在接收到含有Expires的响应后，会以缓存来应答请求，在Expires指定的时间之前，响应的副本会一直被保存。当超过指定的时间后，缓存服务器在请求发送过来时，会转向源服务器请求资源。
 
 当Cache-Control有指定max-age指令时，比起Expires，会优先处理max-age指令。
 
 ### Last-Modified
-![Last-Modified](/imETags/HTTP图解/6Last-Modified.png)    
+![Last-Modified](/images/HTTP图解/6Last-Modifiedx.png)    
 指明资源最终修改的时间。
 
-## 为Cookie服务的首部字段
+## 7. 为Cookie服务的首部字段
 Cookie的工作机制是用户识别及状态管理。
-![为Cookie服务的首部字段](/imETags/HTTP图解/6为Cookie服务的首部字段.png)    
+![为Cookie服务的首部字段](/images/HTTP图解/6为Cookie服务的首部字段.png)    
 
 ### Set-Cookie
+> Set-Cookie: status=enable; expires=Tue, 05 Jul 2011 07:26:31 GMT; path=/; domain=.hackr.jp;
+
+响应首部 Set-Cookie 被用来由服务器端向客户端发送 cookie。
+![Set-Cookie字段属性](/images/HTTP图解/6Set-Cookie字段属性.png)    
+
+HttpOnly属性使JS脚本（ Document.cookie 属性、XMLHttpRequest 和  Request APIs 进行访问）无法获得Cookie。其主要目的是为了防止跨站脚本攻击（Cross-site-scripting,XSS）对Cookie的信息窃取。 
+
+### Cookie
+Cookie 是一个请求首部，其中含有先前由服务器通过 Set-Cookie  首部投放并存储到客户端的 HTTP cookies。
+
+这个首部可能会被完全移除，例如在浏览器的隐私设置里面设置为禁用cookie。
+
+## 8. 其他首部字段
+HTTP首部字段是可以自行扩展的。所以在Web服务器和浏览器的应用上回出现各种非标准的首部字段。
+
+### X-Frame-Options
+> X-Frame-Options: DENY
+
+X-Frame-Options HTTP 响应头是用来给浏览器 指示允许一个页面 可否在 \<frame\>, \<iframe\>, \<embed\> 或者 \<object\> 中展现的标记。站点可以通过确保网站没有被嵌入到别人的站点里面，从而避免 clickjacking点击劫持攻击 攻击。
+```
+X-Frame-Options: deny
+X-Frame-Options: sameorigin
+X-Frame-Options: allow-from https://example.com/
+```
+- deny
+表示该页面不允许在 frame 中展示，即便是在相同域名的页面中嵌套也不允许。
+
+- sameorigin
+表示该页面可以在相同域名页面的 frame 中展示。
+
+- allow-from uri
+表示该页面可以在指定来源的 frame 中展示。
+
+### X-XSS-Protection
+> X-XSS-Protection: 1
+属于HTTP响应首部，它是针对跨站脚本攻击（XSS）的一种对策，用于控制浏览器XSS防护机制的开关。
+
+- 0：将XSS过滤设置为无效状态
+- 1：将XSS过滤设置为有效状态
+
+### DNT（Do Not Track）
+DNT属于HTTP请求首部，拒绝个人信息被收集，表示拒绝被精准广告追踪的的一种方法。
+
+- 0：同意被追踪
+- 1：拒绝被追踪
+
+#### 使用 JavaScript 读取 “不追踪” （Do Not Track）状态
+用户对 DNT 的设置还可以使用 Navigator.doNotTrack 属性进行读取:
+```
+navigator.doNotTrack; // "0" or "1"
+```
