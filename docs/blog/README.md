@@ -30,3 +30,7 @@
 - [1. 搭建 vuepress 博客并发布在 github.io 上](./Other/1.%20搭建vuepress博客并发布在github.io上.md)
 - [2. vue 和 webpack 配合常用 package](./Other/2.%20vue和webpack配合常用package.md)
 - [3. yarn.lock、package-lock.json、npm-shrinkwrap.json 的理解](./Other/3.%20yarn.lock、package-lock.json、npm-shrinkwrap.json的理解.md)
+- [4. 艾宾浩斯记忆时间](./Other/4.%20艾宾浩斯记忆时间.md)
+- [5. HTTP常见面试题](./Other/5.%20HTTP常见面试题.md)
+- [6. 大数据量表格加载慢的问题解决方案](./Other/6.%20大数据量表格加载慢的问题解决方案.md)
+

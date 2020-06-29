@@ -33,6 +33,7 @@
 - [3. yarn.lock、package-lock.json、npm-shrinkwrap.json 的理解](docs/blog/Other/3.%20yarn.lock、package-lock.json、npm-shrinkwrap.json的理解.md)
 - [4. 艾宾浩斯记忆时间](docs/blog/Other/4.%20艾宾浩斯记忆时间.md)
 - [5. HTTP常见面试题](docs/blog/Other/5.%20HTTP常见面试题.md)
+- [6. 大数据量表格加载慢的问题解决方案](docs/blog/Other/6.%20大数据量表格加载慢的问题解决方案.md)
 
 ## 书籍总结
 ### 图解HTTP
