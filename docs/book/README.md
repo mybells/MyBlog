@@ -30,3 +30,28 @@
 - [第13章 排序和搜索算法](./学习Javascript数据结构与算法/第13章%20排序和搜索算法.md)
 - [第14章 算法设计与技巧](./学习Javascript数据结构与算法/第14章%20算法设计与技巧.md)
 - [第15章 算法复杂度](./学习Javascript数据结构与算法/第15章%20算法复杂度.md)
+
+## Javascript语言精粹
+- [第1章 精华](./Javascript语言精粹/第1章%20精华.md)
+- [第2章 语法](./Javascript语言精粹/第2章%20语法.md)
+- [第3章 对象](./Javascript语言精粹/第3章%20对象.md)
+- [第4章 函数](./Javascript语言精粹/第4章%20函数.md)
+- [第5章 继承](./Javascript语言精粹/第5章%20继承.md)
+- [第6章 数组](./Javascript语言精粹/第6章%20数组.md)
+- [第7章 正则表达式](./Javascript语言精粹/第7章%20正则表达式.md)
+- [第8章 方法](./Javascript语言精粹/第8章%20方法.md)
+- [附录A 毒瘤](./Javascript语言精粹/附录A%20毒瘤.md)
+- [附录B 糟粕](./Javascript语言精粹/附录B%20糟粕.md)
+
+## 高性能javascript
+- [1. 加载和执行](./高性能Javascript/1.%20加载和执行.md)
+- [2. 数据存取](./高性能Javascript/2.%20数据存取.md)
+- [3. DOM编程](./高性能Javascript/3.%20DOM编程.md)
+- [4. 算法和流程控制](./高性能Javascript/4.%20算法和流程控制.md)
+- [5. 字符串和正则表达式](./高性能Javascript/5.%20字符串和正则表达式.md)
+- [6. 快速响应的用户界面](./高性能Javascript/6.%20快速响应的用户界面.md)
+- [7. Ajax](./高性能Javascript/7.%20Ajax.md)
+- [8. 编程实践](./高性能Javascript/8.%20编程实践.md)
+- [9. 构建并部署高性能javascript应用](./高性能Javascript/9.%20构建并部署高性能javascript应用.md)
+- [10 .工具](./高性能Javascript/10.%20工具.md)
+- [11 .英文对应](./高性能Javascript/11.%20英文对应.md)
