@@ -5,7 +5,8 @@
 - [2. vue 中使用 vuerouter 遇到的问题](./Vue/2.%20vue中使用vuerouter遇到的问题.md)
 - [3. vue 自定义指令](./Vue/3.%20vue自定义指令.md)
 - [4. vue API 总结](./Vue/4.%20vueAPI总结.md)
-- [5. vuex 总结](./Vue/5.%20vuex总结.md)
+- [5. vuex使用总结](./Vue/5.%20vuex使用总结.md)
+- [6. vue-router原理总结](./Vue/6.%20vue-router总结.md)
 
 ## Javascript
 - [1. 深拷贝与浅拷贝](./Javascript/1.%20深拷贝与浅拷贝.md)
@@ -20,6 +21,7 @@
 - [10. async,await原理代码实现](./Javascript/10.%20async,await原理代码实现.md)
 - [11. Generator原理代码实现](./Javascript/11.%20Generator原理代码实现.md)
 - [12. Js模拟实现call、apply、bind、new原理](./Javascript/12.%20Js模拟实现call、apply、bind、new原理.md)
+- [13. 常用的js函数](./Javascript/13.%20常用的js函数.md)
 
 
 ## Css
@@ -33,4 +35,6 @@
 - [4. 艾宾浩斯记忆时间](./Other/4.%20艾宾浩斯记忆时间.md)
 - [5. HTTP常见面试题](./Other/5.%20HTTP常见面试题.md)
 - [6. 大数据量表格加载慢的问题解决方案](./Other/6.%20大数据量表格加载慢的问题解决方案.md)
+- [7. 图片理解各个知识点](./Other/7.%20图片理解各个知识点.md)
+- [8. 关于浏览器url隐藏的解决方法](./Other/8.%20关于浏览器url隐藏的解决方法.md)
 
