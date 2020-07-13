@@ -20,7 +20,7 @@
 - [9. 实现一个Promise/A+ 规范的Promise](./Javascript/9.%20实现一个Promise/A+%20规范的Promise.md)
 - [10. async,await原理代码实现](./Javascript/10.%20async,await原理代码实现.md)
 - [11. Generator原理代码实现](./Javascript/11.%20Generator原理代码实现.md)
-- [12. Js模拟实现call、apply、bind、new原理](./Javascript/12.%20Js模拟实现call、apply、bind、new原理.md)
+- [12. Js模拟实现call、apply、bind、new、instance](./Javascript/12.%20Js模拟实现call、apply、bind、new、instance.md)
 - [13. 常用的js函数](./Javascript/13.%20常用的js函数.md)
 
 
