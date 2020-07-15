@@ -26,6 +26,8 @@
 - [11. Generator原理代码实现](docs/blog/Javascript/11.%20Generator原理代码实现.md)
 - [12. Js模拟实现call、apply、bind、new、instance](docs/blog/Javascript/12.%20Js模拟实现call、apply、bind、new、instance.md)
 - [13. 常用的js函数](docs/blog/Javascript/13.%20常用的js函数.md)
+- [14. 函数变量声明提升和优先级](./Javascript/14.%20函数变量声明提升和优先级.md)
+- [15. Object.defineProperty和Proxy区别](./Javascript/15.%20Object.defineProperty和Proxy区别.md)
 
 ## Css
 - [1. BFC（Block Formatting Context）块级格式化上下文](docs/blog/Css/1.%20BFC（Block%20Formatting%20Context）块级格式化上下文.md)

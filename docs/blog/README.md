@@ -25,6 +25,8 @@
 - [11. Generator原理代码实现](./Javascript/11.%20Generator原理代码实现.md)
 - [12. Js模拟实现call、apply、bind、new、instance](./Javascript/12.%20Js模拟实现call、apply、bind、new、instance.md)
 - [13. 常用的js函数](./Javascript/13.%20常用的js函数.md)
+- [14. 函数变量声明提升和优先级](./Javascript/14.%20函数变量声明提升和优先级.md)
+- [15. Object.defineProperty和Proxy区别](./Javascript/15.%20Object.defineProperty和Proxy区别.md)
 
 
 ## Css
