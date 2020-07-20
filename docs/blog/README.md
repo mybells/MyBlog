@@ -7,6 +7,9 @@
 - [4. vue API 总结](./Vue/4.%20vueAPI总结.md)
 - [5. vuex使用总结](./Vue/5.%20vuex使用总结.md)
 - [6. vue-router原理总结](./Vue/6.%20vue-router总结.md)
+- [7. vue响应式原理](./Vue/7.%20vue响应式原理.md)
+- [8. vue编译原理](./Vue/9.%20vue编译原理.md)
+- [9. diff算法原理](./Vue/0.%20diff算法原理.md)
 
 ## Javascript
 - [1. 深拷贝与浅拷贝](./Javascript/1.%20深拷贝与浅拷贝.md)
@@ -22,6 +25,8 @@
 - [11. Generator原理代码实现](./Javascript/11.%20Generator原理代码实现.md)
 - [12. Js模拟实现call、apply、bind、new、instance](./Javascript/12.%20Js模拟实现call、apply、bind、new、instance.md)
 - [13. 常用的js函数](./Javascript/13.%20常用的js函数.md)
+- [14. 函数变量声明提升和优先级](./Javascript/14.%20函数变量声明提升和优先级.md)
+- [15. Object.defineProperty和Proxy区别](./Javascript/15.%20Object.defineProperty和Proxy区别.md)
 
 
 ## Css
@@ -37,4 +42,6 @@
 - [6. 大数据量表格加载慢的问题解决方案](./Other/6.%20大数据量表格加载慢的问题解决方案.md)
 - [7. 图片理解各个知识点](./Other/7.%20图片理解各个知识点.md)
 - [8. 关于浏览器url隐藏的解决方法](./Other/8.%20关于浏览器url隐藏的解决方法.md)
-
+- [9. 跨域](./Other/9.%20跨域.md)
+- [10. 从输入url到页面加载完发生了什么？](./Other/10.%20从输入url到页面加载完发生了什么？.md)
+- [11. 面试问题](./Other/11.%20面试问题.md)
