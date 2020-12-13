@@ -101,3 +101,6 @@
 - [9. 构建并部署高性能javascript应用](docs/book/高性能Javascript/9.%20构建并部署高性能javascript应用.md)
 - [10 .工具](docs/book/高性能Javascript/10.%20工具.md)
 - [11 .英文对应](docs/book/高性能Javascript/11.%20英文对应.md)
+
+### Git高手之路
+- [1. Git应用入门](docs/book/Git高手之路/1.%20Git应用入门.md)
