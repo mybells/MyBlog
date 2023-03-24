@@ -7,13 +7,13 @@ on:
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
       with:
-        node-version: '14'
+        node-version: '12.x'
     - run: npm ci
-    - run: yarn build
+    - run: npm run build
 
     #发布到mybells.github.io/master
     - name: Deploy mybells.github.io/master
