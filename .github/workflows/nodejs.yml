@@ -13,7 +13,7 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: '14'
-    - run: yarn
+    - run: yarn --frozen-lockfile
     - run: yarn build
 
     #发布到mybells.github.io/master
