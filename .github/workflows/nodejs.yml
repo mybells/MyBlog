@@ -12,9 +12,9 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
       with:
-        node-version: '10'
-    - run: npm ci
-    - run: npm run build
+        node-version: '14'
+    - run: yarn
+    - run: yarn build
 
     #发布到mybells.github.io/master
     - name: Deploy mybells.github.io/master
