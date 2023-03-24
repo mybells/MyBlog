@@ -15,9 +15,9 @@ jobs:
 
     #发布到mybells.github.io/master
     - name: Deploy mybells.github.io/master
-      uses: peaceiris/actions-gh-pages@v2
+      uses: peaceiris/actions-gh-pages@v3
       env:
-        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        ACTIONS_DEPLOY_KEY: ${{ secrets.GITHUB_TOKEN }}
         EXTERNAL_REPOSITORY: mybells/mybells.github.io #可以新建一个mybells.github.io仓库发布到master
         PUBLISH_BRANCH: master
         PUBLISH_DIR: docs/.vuepress/dist
