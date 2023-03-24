@@ -12,12 +12,12 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.0",
-    "core-js": "3.29.1",
-    "element-ui": "^2.15.13",
-    "vuepress": "^1.9.9"
+    "core-js": "2",
+    "element-ui": "^2.13.0",
+    "vuepress": "~1.2.0"
   },
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.9.9",
-    "@vuepress/plugin-nprogress": "^1.9.9"
+    "@vuepress/plugin-back-to-top": "~1.2.0",
+    "@vuepress/plugin-nprogress": "~1.2.0"
   }
 }
