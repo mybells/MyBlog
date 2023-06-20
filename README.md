@@ -1,7 +1,12 @@
 # Mybells's Blog
 
+<<<<<<< HEAD
 ## 博客目录test2
 ## Vue
+=======
+## 博客目录
+## Vuetest1test3
+>>>>>>> 8cb5be1 (Squashed commit of the following:)
 - [1. vue 中的 watch 和 data 用法](docs/blog/Vue/1.%20vue中的watch和data用法.md)
 - [2. vue 中使用 vuerouter 遇到的问题](docs/blog/Vue/2.%20vue中使用vuerouter遇到的问题.md)
 - [3. vue 自定义指令](docs/blog/Vue/3.%20vue自定义指令.md)
