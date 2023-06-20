@@ -1,6 +1,6 @@
 # Mybells's Blog
 
-## 博客目录test2
+## 博客目录
 ## Vue
 - [1. vue 中的 watch 和 data 用法](docs/blog/Vue/1.%20vue中的watch和data用法.md)
 - [2. vue 中使用 vuerouter 遇到的问题](docs/blog/Vue/2.%20vue中使用vuerouter遇到的问题.md)
