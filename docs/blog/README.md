@@ -27,6 +27,7 @@
 - [13. 常用的js函数](./Javascript/13.%20常用的js函数.md)
 - [14. 函数变量声明提升和优先级](./Javascript/14.%20函数变量声明提升和优先级.md)
 - [15. Object.defineProperty和Proxy区别](./Javascript/15.%20Object.defineProperty和Proxy区别.md)
+- [16. 遇到的坑](./Javascript/16.%20遇到的坑.md)
 
 
 ## Css
