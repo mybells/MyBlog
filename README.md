@@ -47,6 +47,10 @@
 - [9. 跨域](docs/blog/Other/9.%20跨域.md)
 - [10. 从输入url到页面加载完发生了什么？](docs/blog/Other/10.%20从输入url到页面加载完发生了什么？.md)
 - [11. 面试问题](docs/blog/Other/11.%20面试问题.md)
+- [12. Cookie、Session、Token区别](docs/blog/Other/12.%20Cookie、Session、Token区别.md)
+- [13. XSS、CSRF区别](docs/blog/Other/13.%20XSS、CSRF区别.md)
+- [14. TypeScript学习](docs/blog/Other/14.%20TypeScript学习.md)
+- [15. oj处理输入输出](docs/blog/Other/15.%20oj处理输入输出.md)
 
 ## 书籍总结
 ### 图解HTTP
@@ -118,6 +122,3 @@
 - [第8章 打包优化](docs/book/Webpack实战/第8章%20打包优化.md)
 - [第9章 开发环境调优](docs/book/Webpack实战/第9章%20开发环境调优.md)
 - [第10章 更多Javascript打包工具](docs/book/Webpack实战/第10章%20更多Javascript打包工具.md)
-
-### 华为od算法题库
-- [oj处理输入输出](docs/book/华为od算法题库/oj处理输入输出.md)

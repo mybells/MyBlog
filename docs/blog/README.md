@@ -47,3 +47,7 @@
 - [9. 跨域](./Other/9.%20跨域.md)
 - [10. 从输入url到页面加载完发生了什么？](./Other/10.%20从输入url到页面加载完发生了什么？.md)
 - [11. 面试问题](./Other/11.%20面试问题.md)
+- [12. Cookie、Session、Token区别](./Other/12.%20Cookie、Session、Token区别.md)
+- [13. XSS、CSRF区别](./Other/13.%20XSS、CSRF区别.md)
+- [14. TypeScript学习](./Other/14.%20TypeScript学习.md)
+- [15. oj处理输入输出](./Other/15.%20oj处理输入输出.md)
