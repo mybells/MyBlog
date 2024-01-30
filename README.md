@@ -118,3 +118,6 @@
 - [第8章 打包优化](docs/book/Webpack实战/第8章%20打包优化.md)
 - [第9章 开发环境调优](docs/book/Webpack实战/第9章%20开发环境调优.md)
 - [第10章 更多Javascript打包工具](docs/book/Webpack实战/第10章%20更多Javascript打包工具.md)
+
+### 华为od算法题库
+- [oj处理输入输出](docs/book/华为od算法题库/oj处理输入输出.md)
