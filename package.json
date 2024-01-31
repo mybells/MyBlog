@@ -15,7 +15,6 @@
     "core-js": "2.6.12",
     "element-ui": "^2.15.13",
     "markdown-it": "^13.0.1",
-    "vue-pdf": "^4.3.0",
     "vuepress": "1.9.9"
   },
   "devDependencies": {
