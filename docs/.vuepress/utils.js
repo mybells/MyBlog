@@ -33,8 +33,10 @@ exports.inferSiderbars = () => {
               return `${item}/${name}`;
             }
           }).filter(item => item).sort((a, b) => {
-            if (a.match(/\d+/g) && b.match(/\d+/g)) {
-              return a.match(/\d+/g)[0] - b.match(/\d+/g)[0]
+            const str1 = a.split('/')[1];
+            const str2 = b.split('/')[1];
+            if (!Number.isNaN(parseInt(str1)) && !Number.isNaN(parseInt(str2))) {
+              return parseInt(str1) - parseInt(str2);
             } else {
               return a - b
             }
