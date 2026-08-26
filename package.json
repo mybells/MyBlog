@@ -1,12 +1,12 @@
 {
   "name": "blog",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "My Blog",
   "main": "index.js",
   "scripts": {
-    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && vuepress dev docs",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && vuepress build docs",
-    "publish": "deploy.sh"
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider vuepress dev docs",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider vuepress build docs",
+    "publish": "./deploy.sh"
   },
   "author": "mybells",
   "license": "ISC",
