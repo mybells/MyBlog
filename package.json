@@ -4,8 +4,8 @@
   "description": "My Blog",
   "main": "index.js",
   "scripts": {
-    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && vuepress dev docs",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && vuepress build docs",
+    "dev": "NODE_OPTIONS=$(node -e \"console.log(Number(process.versions.node.split('.')[0]) >= 17 ? '--openssl-legacy-provider' : '')\") vuepress dev docs",
+    "build": "NODE_OPTIONS=$(node -e \"console.log(Number(process.versions.node.split('.')[0]) >= 17 ? '--openssl-legacy-provider' : '')\") vuepress build docs",
     "publish": "./deploy.sh"
   },
   "author": "mybells",
