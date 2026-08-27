@@ -9,8 +9,8 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
       with:
         node-version: '14'
     - run: yarn --frozen-lockfile
@@ -18,7 +18,7 @@ jobs:
 
     #发布到mybells.github.io/master
     - name: Deploy mybells.github.io/master
-      uses: peaceiris/actions-gh-pages@v3
+      uses: peaceiris/actions-gh-pages@v4
       with:
         personal_token: ${{ secrets.PERSONAL_TOKEN }}
         external_repository: mybells/mybells.github.io #可以新建一个mybells.github.io仓库发布到master
